@@ -1,0 +1,203 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                    initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Appointify</title>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="assets\heart_01.png">
+            <h1> Appointify </h1>
+        </div>
+
+        <div class="pages_nav">
+            <img src="assets\Users_Profiles_Plus.png">
+            <input type='image' id="openBigChungus" src="assets\calendar_01.png">
+            <input type="image" src="assets\plus_01.png" id="openModal">
+        </div>
+    </div>
+
+    <div class="container">
+            <div id="reminders">
+                <!--List with bullet points of all events-->
+                <br>
+                <h2>Upcoming</h2>
+                <ul class="appointments" id="eventList"></ul>
+            </div>
+
+    </div>
+    <!--POPOUTS / MODALS-->
+
+    <!-- Fullscreen Event Adding-->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <h3>Add Event</h3>
+            <!-- INPUTS (date, start & finish time, appointment & details)-->
+            <input type="date" id="eventDate">
+            <input type="text" id="eventTitle" placeholder="Title">
+            <br>
+            <p white-space: nowrap;>From: <input type="time" id="startTime" name="startTime"> </p>
+            <p white-space: nowrap;>Until: <input type="time" id="endTime" name="endTime"> </p>
+            <button id="addEvent" onclick="addEvent()">
+                Add Event
+            </button>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+
+    <!-- Fullscreen calender-->
+    <div id="bigChungus" class="modal">
+        <div class="modal-content">
+            <h class="calendar-header"></h>
+                <p class="calendar-days"></p>
+                    <div class="calendar-navigation"></div>
+                        <span id="calendar-prev"></span>
+            
+            
+                        <ul>
+                <li class="prev">&#10094;</li>
+                <li class="next">&#10095;</li>
+                <li id="calendarMonth">Placeholder<br><span style="font-size:18px" id="calendarYear"></span>
+                </li>
+            </ul>
+            
+            <div class="calendar-body"></div>
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+
+                <ul class="days">
+                    <li id="oldDate">27</li>
+                    <li id="oldDate">28</li>
+                    <li id="oldDate">29</li>
+                    <li id="oldDate">30</li>
+                    <li id="oldDate">31</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10</span></li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+
+
+
+            <button id="closeBigChungus">CLOSE</button>
+            <input type="image" src="assets/Calendar_01.png"></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="reminders" class="day-schedule">
+            <br>
+            <h2>Today's Schedule </h2>
+            <ul class="appointments" id="todaysList"></ul>
+
+
+            <div class="calendar">
+                <div class="month">
+                    <ul>
+                        <li><button id="prevYear" class="prev">&#10094</button></li>
+                        <li><span id="calendarMonth">Month<br><span style="font-size:18px" id="calendarYear"></span></span></li>
+                        <li><button id="nextYear" class="next">&#10095</button></li>
+                    </ul>
+                </div>
+            
+
+                <ul class="weekdays">
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                </ul>
+
+                <ul class="days">
+                    <li id="oldDate">27</li>
+                    <li id="oldDate">28</li>
+                    <li id="oldDate">29</li>
+                    <li id="oldDate">30</li>
+                    <li id="oldDate">31</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10</span></li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+        <script src="script1.js"></script>
+</body>
+
+
+</html>
